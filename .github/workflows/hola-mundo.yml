@@ -1,0 +1,16 @@
+name: Hello-World-JS
+run-name: Aprendiendo GitHub Actions
+on:
+  push:
+    branches:
+      - aprendiendo-github-actions
+jobs:
+  Display-Hello-World:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Definir variable
+        run: echo "GITHUB_USER=${{ github.actor }}" >> $GITHUB_ENV
+      - name:
+        run: node main.js
